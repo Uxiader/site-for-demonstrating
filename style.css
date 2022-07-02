@@ -1,0 +1,191 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+	font-family: "Helvetica Neue";
+}
+
+a {
+	text-decoration: none;
+}
+
+
+header {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	z-index:99;
+}
+
+nav {
+	display: flex;
+	min-height: 50px;
+	margin: 27px auto 0 auto;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul {
+	align-self: center;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li:not(:last-of-type) {
+	margin-right: 24px;
+}
+
+nav ul a {
+	font-weight: 400;
+	line-height: 16px;
+	color: #22356F;
+	padding: 15px 6px;
+}
+
+.link_active {
+	box-shadow: inset 0px -1px 0px #22356F;
+	font-weight: 500;
+}
+
+.btn {
+	background: #62D0DF;
+	border-radius: 50px;
+	padding: 16px 30px;
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: #FFFFFF;
+}
+
+.container {
+	max-width: 1130px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hero {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	padding-top: 77px;
+}
+
+
+.hero::before {
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	background-image: linear-gradient(to right, #F4F9E2 77%, transparent 0);
+	z-index:-1;
+}
+
+.hero_offer {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 44%;
+}
+
+
+.hero_offer h1 {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 56px;
+	letter-spacing: -0.035em;
+	color: #22356F;
+	text-transform: uppercase;
+	max-width: 70%;
+	margin-bottom: 19px;
+}
+
+.hero_offer p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 43px;
+	color: #22356F;
+	margin-bottom: 70px;
+	max-width: 500px;
+}
+
+.buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.btn1 {
+	display: inline-block;
+	background: #F9B640;
+	text-transform: uppercase;
+	padding: 12px 30px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	/* identical to box height */
+	letter-spacing: 0.1em;
+	color: #FFFFFF;
+}
+
+.btn2 {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 12px 30px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 24px;
+	/* identical to box height */
+	letter-spacing: 0.1em;
+	color: #FAB63E;
+}
+
+.photo {
+	display: block;
+	position: absolute;
+	top:0;
+	right: 0;
+	width: 50%;
+}
+
+
+@media (max-width:1150px) {
+
+	.hero {
+		margin-top: 50px;
+	}
+
+	.container {
+		padding: 0 60px;
+	}
+
+
+	.photo {
+		display: none;
+	}
+	
+	.hero::before {
+		background-image: linear-gradient(to right, #F4F9E2 100%, transparent 0);
+	}
+
+	.hero_offer {
+		flex-basis: 100%;
+		text-align: center;
+		align-items: center;
+	}
+
+	.hero_offer h1 {
+		max-width: 60%;
+		min-width: 400px;
+	}
+}
