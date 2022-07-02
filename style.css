@@ -188,4 +188,8 @@ nav ul a {
 		max-width: 60%;
 		min-width: 400px;
 	}
+
+	nav {
+		flex-direction: column;
+	}
 }
