@@ -162,7 +162,7 @@ nav ul a {
 @media (max-width:1150px) {
 
 	.hero {
-		margin-top: 50px;
+		margin-top: 60px;
 	}
 
 	.container {
@@ -191,5 +191,10 @@ nav ul a {
 
 	nav {
 		flex-direction: column;
+		row-gap: 40px;
+	}
+
+	nav .btn {
+		display: none;
 	}
 }
